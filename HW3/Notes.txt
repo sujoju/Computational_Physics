@@ -1,0 +1,40 @@
+NOTE: All the plots can be found under the "plots" folder.
+
+Problem 2
+
+Using the plot shown in assignment3_2.png, we find that the maximum range 
+occurs around 40-45 degrees.
+
+Problem 3
+
+The analytical solution, denoted as sol(t), for this problem is given as follows:
+
+theta_0 = 0.15
+l = 1.0
+Omega = sqrt(9.81/l)
+sol(t) = theta_0*sin(Omega*t + pi/2)
+
+Using the plot shown in assignment3_3_rk.png, we can see that rkO4 and rkO2
+both give numerical solutions that are "very close" to the analytical solution;
+by "very close," the relative error between the numerical solutions using 
+rkO4 and rkO2 are essentially 0. However, the numerical solution using rkO2
+deviates slightly more than the numerical solution using rkO4.
+
+Problem 4
+
+The analytical solution for our amplitude, denoted as theta_0, for this problem 
+is given as follows:
+
+l = 1.0
+Omega = sqrt(9.81/l)
+F_D = 0.2
+theta_0 = F_D/sqrt((Omega**2-Omega_D**2)**2 + (q*Omega_D)**2)
+
+Where we are scanning over Omega_D or q.
+From the analytical solution above, we should expect resonance to occur 
+when Omega_D = Omega, which we do see in our plot of Omega_D vs Max Amplitude.
+Furthermore, at resonance, we should expect our analytical solution to behave
+like 1/x since (Omega**2-Omega_D**2)**2 = 0. Again, we see this to be the 
+case in our plot of Q vs Max Amplitude. In both plots, we see that the log
+plots for both the analytical and measured data match quite well with each
+other.
