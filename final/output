@@ -1,0 +1,955 @@
+[H[JLoaded Network patterns, memory : 0
+
+  + + + + +        
+  + + + + +        
+  + +   + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+  + + + + + + + +  
+  + + + + + + + +   
+[H[JLoaded Network patterns, memory : 1
+
++ + + + + + + + + +
++ + + + + + + + + +
++ +                
++ +                
++ + + + + + + + + +
++ + + + + + + + + +
++ +                
++ +                
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[JLoaded Network patterns, memory : 2
+
++ + + + + + +      
++ + + + + + + +    
++ +           + +  
++ +           + +  
++ + + + + + + +    
++ + + + + + +      
++ +                
++ +                
++ +                
++ +                 
+[H[JLoaded Network patterns, memory : 3
+
++ + + + + + + + + +
++ + + + + + + + + +
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +         
+[H[J[H[Jpristine test pattern : 
+
++   + +     +      
++ +   +     + + + +
++   +     + + +   +
++ +           + + +
++     + + + + + + +
++ +   +     +     +
++ +   + +       + +
+  +   +       +    
++ +         +   + +
++ +     +   + +   + 
+[H[Jrandomized test pattern : 
+
++   + +     +      
++ +   +     + + + +
++   +     + + +   +
++ +           + + +
++     + + + + + + +
++ +   +     +     +
++ +   + +       + +
+  +   +       +    
++ +         +   + +
++ +     +   + +   + 
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
++   + +     +      
++ +   +     + + + +
++   +     + + +   +
++ +           + + +
++     + + + + + + +
++ +   +     +     +
++ +   + +       + +
+  +   +       +    
++ +         +   + +
++ +     +   + +   + 
+[H[Jsweep: 1
+
++   + +     +      
++ +   +     + + + +
++ +           + +  
++ +           + +  
++ + + + + + + + + +
++ + + + + + + + + +
++ +                
++ +                
++ +               +
++ +               + 
+[H[Jsweep: 2
+
++ + + + + + +      
++ + + + + + + + + +
++ +           + +  
++ +           + +  
++ + + + + + + +    
++ + + + + + +      
++ +                
++ +                
++ +                
++ +                 
+[H[Jsweep: 3
+
++ + + + + + +      
++ + + + + + + +    
++ +           + +  
++ +           + +  
++ + + + + + + +    
++ + + + + + +      
++ +                
++ +                
++ +                
++ +                 
+[H[Jrecalled: 
++ + + + + + +      
++ + + + + + + +    
++ +           + +  
++ +           + +  
++ + + + + + + +    
++ + + + + + +      
++ +                
++ +                
++ +                
++ +                 
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/001/1.dat	 hammingDistance: 2.080000
+
+index: 1	 pattern: ./character_groups/001/E.dat	 hammingDistance: 1.200000
+
+index: 2	 pattern: ./character_groups/001/P.dat	 hammingDistance: 0.000000
+
+index: 3	 pattern: ./character_groups/001/T.dat	 hammingDistance: 1.760000
+
+nearest match: 2	hammingDistance: 0.000000
+
++ + + + + + +      
++ + + + + + + +    
++ +           + +  
++ +           + +  
++ + + + + + + +    
++ + + + + + +      
++ +                
++ +                
++ +                
++ +                 
+
+[H[JLoaded Network patterns, memory : 0
+
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
+                + +
+                + +
+                + +
+                + +
+                + +
+                + + 
+[H[JLoaded Network patterns, memory : 1
+
++ + + + + + + + + +
++ + + + + + + + + +
++ +                
++ +                
++ +         + + + +
++ +         + + + +
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[JLoaded Network patterns, memory : 2
+
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ +             + +
++ +             + + 
+[H[JLoaded Network patterns, memory : 3
+
++ +             + +
++ + +         + + +
++ + +         + + +
+  + + +     + + +  
+    + + + + + +    
+    + + + + + +    
+  + + +     + + +  
++ + +         + + +
++ + +         + + +
++ +             + + 
+[H[J[H[Jpristine test pattern : 
+
++ +         +   + +
++ +     +     + +  
++ + +           + +
++ +         +   + +
++ + +     + + + + +
++ + +   + + + + + +
+  +             + +
+    +   +       + +
++       +   +   + +
+  +         +   + + 
+[H[Jrandomized test pattern : 
+
++ +         +   + +
++ +     +     + +  
++ + +           + +
++ +         +   + +
++ + +     + + + + +
++ + +   + + + + + +
+  +             + +
+    +   +       + +
++       +   +   + +
+  +         +   + + 
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
++ +         +   + +
++ +     +     + +  
++ + +           + +
++ +         +   + +
++ + +     + + + + +
++ + +   + + + + + +
+  +             + +
+    +   +       + +
++       +   +   + +
+  +         +   + + 
+[H[Jsweep: 1
+
++ +             + +
++ + +         + + +
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ +             + +
++ +             + + 
+[H[Jrecalled: 
++ +             + +
++ + +         + + +
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ +             + +
++ +             + + 
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/002/7.dat	 hammingDistance: 1.520000
+
+index: 1	 pattern: ./character_groups/002/G.dat	 hammingDistance: 1.360000
+
+index: 2	 pattern: ./character_groups/002/H.dat	 hammingDistance: 0.080000
+
+index: 3	 pattern: ./character_groups/002/X.dat	 hammingDistance: 1.040000
+
+nearest match: 2	hammingDistance: 0.080000
+
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ +             + +
++ +             + + 
+
+[H[JLoaded Network patterns, memory : 0
+
+    + + + + + +    
+    + + + + + +    
++ +             + +
++ +             + +
++ +     + +     + +
++ +     + +     + +
++ +             + +
++ +             + +
+    + + + + + +    
+    + + + + + +     
+[H[JLoaded Network patterns, memory : 1
+
+        + +        
+    + + + + + +    
+  + + +     + + +  
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ +             + + 
+[H[JLoaded Network patterns, memory : 2
+
++ + + + + + + + + +
++ + + + + + + + + +
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +         
+[H[JLoaded Network patterns, memory : 3
+
++ +             + +
++ + +         + + +
+  + +         + +  
+  + + +     + + +  
+    + + + + + +    
+      + + + +      
+        + +        
+        + +        
+        + +        
+        + +         
+[H[J[H[Jpristine test pattern : 
+
++         + +   + +
+  +   +         + +
+  +       +   + +  
+  +   +     + + + +
+    + + + + + +    
+      + + +        
+  +     + +        
+  +     + + +   +  
+        + +        
++       +           
+[H[Jrandomized test pattern : 
+
++         + +   + +
+  +   +         + +
+  +       +   + +  
+  +   +     + + + +
+    + + + + + +    
+      + + +        
+  +     + +        
+  +     + + +   +  
+        + +        
++       +           
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
++         + +   + +
+  +   +         + +
+  +       +   + +  
+  +   +     + + + +
+    + + + + + +    
+      + + +        
+  +     + +        
+  +     + + +   +  
+        + +        
++       +           
+[H[Jsweep: 1
+
++ +             + +
++ + +         + + +
+  + +         + +  
+  + + +     + + +  
+    + + + + + +    
+      + + + +      
+        + +        
+        + +        
+        + +        
+        + +         
+[H[Jrecalled: 
++ +             + +
++ + +         + + +
+  + +         + +  
+  + + +     + + +  
+    + + + + + +    
+      + + + +      
+        + +        
+        + +        
+        + +        
+        + +         
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/003/0.dat	 hammingDistance: 2.480000
+
+index: 1	 pattern: ./character_groups/003/A.dat	 hammingDistance: 2.560000
+
+index: 2	 pattern: ./character_groups/003/T.dat	 hammingDistance: 1.200000
+
+index: 3	 pattern: ./character_groups/003/Y.dat	 hammingDistance: 0.000000
+
+nearest match: 3	hammingDistance: 0.000000
+
++ +             + +
++ + +         + + +
+  + +         + +  
+  + + +     + + +  
+    + + + + + +    
+      + + + +      
+        + +        
+        + +        
+        + +        
+        + +         
+
+[H[JLoaded Network patterns, memory : 0
+
++ +             + +
++ + + +     + + + +
++ + + +     + + + +
++ +   + + + +   + +
++ +   + + + +   + +
++ +     + +     + +
++ +     + +     + +
++ +             + +
++ +             + +
++ +             + + 
+[H[JLoaded Network patterns, memory : 1
+
+    + + + + + +    
+    + + + + + +    
++ +             + +
++ +             + +
++ +             + +
++ +       + +   + +
++ +       + +   + +
++ +         + + + +
+    + + + + + + + +
+    + + + + + + +   
+[H[JLoaded Network patterns, memory : 2
+
++ + + + + + + + + +
++ + + + + + + + + +
++ +           + + +
++ +                
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
++ + +           + +
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[JLoaded Network patterns, memory : 3
+
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[J[H[Jpristine test pattern : 
+
++ + + + + + + + + +
++ + + + +     + + +
++ + + +       + + +
++ + + +            
+  + + + + + + + +  
+  + + + +   + + + +
+                  +
++   +           + +
++ + + + + + +   + +
+  + + + + +   + + + 
+[H[Jrandomized test pattern : 
+
++ + + + + + + + + +
++ + + + +     + + +
++ + + +       + + +
++ + + +            
+  + + + + + + + +  
+  + + + +   + + + +
+                  +
++   +           + +
++ + + + + + +   + +
+  + + + + +   + + + 
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
++ + + + + + + + + +
++ + + + +     + + +
++ + + +       + + +
++ + + +            
+  + + + + + + + +  
+  + + + +   + + + +
+                  +
++   +           + +
++ + + + + + +   + +
+  + + + + +   + + + 
+[H[Jsweep: 1
+
++ + + + + + + + + +
++ + + + + + + + + +
++ +           + + +
++ +                
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
++ + +           + +
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[Jrecalled: 
++ + + + + + + + + +
++ + + + + + + + + +
++ +           + + +
++ +                
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
++ + +           + +
++ + + + + + + + + +
++ + + + + + + + + + 
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/004/M.dat	 hammingDistance: 1.600000
+
+index: 1	 pattern: ./character_groups/004/Q.dat	 hammingDistance: 1.320000
+
+index: 2	 pattern: ./character_groups/004/S.dat	 hammingDistance: 0.000000
+
+index: 3	 pattern: ./character_groups/004/U.dat	 hammingDistance: 1.200000
+
+nearest match: 2	hammingDistance: 0.000000
+
++ + + + + + + + + +
++ + + + + + + + + +
++ +           + + +
++ +                
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
++ + +           + +
++ + + + + + + + + +
++ + + + + + + + + + 
+
+[H[JLoaded Network patterns, memory : 0
+
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[JLoaded Network patterns, memory : 1
+
+  + + + + + + + +  
+  + + + + + + + + +
++ +             + +
++ +             + +
+  + + + + + + + + +
+    + + + + +   + +
+                + +
+                + +
+                + +
+                + + 
+[H[JLoaded Network patterns, memory : 2
+
++ + + + + + + + +  
++ + + + + + + + +  
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ + + + + + + + +  
++ + + + + + + + +   
+[H[JLoaded Network patterns, memory : 3
+
++ + + + + + + + + +
++ + + + + + + + + +
+            + + +  
+        + + + +    
+        + +        
+      + + +        
+  + + + +          
++ + +              
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[J[H[Jpristine test pattern : 
+
++ + + + + + + + + +
++ +   + + + + + + +
+                  +
+              + + +
++ + + + + + +     +
++ + + + + + + + + +
+    +           + +
+  + +             +
++ +   +   +   + + +
++ + + + + + + + + + 
+[H[Jrandomized test pattern : 
+
++ + + + + + + + + +
++ +   + + + + + + +
+                  +
+              + + +
++ + + + + + +     +
++ + + + + + + + + +
+    +           + +
+  + +             +
++ +   +   +   + + +
++ + + + + + + + + + 
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
++ + + + + + + + + +
++ +   + + + + + + +
+                  +
+              + + +
++ + + + + + +     +
++ + + + + + + + + +
+    +           + +
+  + +             +
++ +   +   +   + + +
++ + + + + + + + + + 
+[H[Jsweep: 1
+
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[Jrecalled: 
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + + 
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/005/3.dat	 hammingDistance: 0.000000
+
+index: 1	 pattern: ./character_groups/005/9.dat	 hammingDistance: 1.080000
+
+index: 2	 pattern: ./character_groups/005/B.dat	 hammingDistance: 0.480000
+
+index: 3	 pattern: ./character_groups/005/Z.dat	 hammingDistance: 1.400000
+
+nearest match: 0	hammingDistance: 0.000000
+
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + +
+                + +
+                + +
++ + + + + + + + + +
++ + + + + + + + + + 
+
+[H[JLoaded Network patterns, memory : 0
+
+  + + + + + +      
+  + + + + + +      
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +   
+[H[JLoaded Network patterns, memory : 1
+
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +        
+        + +         
+[H[JLoaded Network patterns, memory : 2
+
++ +                
++ +                
++ +                
++ +                
++ +                
++ +                
++ +                
++ +                
++ + + + + + + + + +
++ + + + + + + + + + 
+[H[JLoaded Network patterns, memory : 3
+
+    + + + + + +    
+    + + + + + +    
++ +             + +
++ +             + +
++ +             + +
++ +       + +   + +
++ +       + +   + +
++ +         + + + +
+    + + + + + + + +
+    + + + + + + +   
+[H[J[H[Jpristine test pattern : 
+
+  +   + + + +      
+  + + + + + +     +
+    +             +
+  + +   +          
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+        +     + +  
++     + + + + + +  
+  + + + + + + + +   
+[H[Jrandomized test pattern : 
+
+  +   + + + +      
+  + + + + + +     +
+    +             +
+  + +   +          
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+        +     + +  
++     + + + + + +  
+  + + + + + + + +   
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
+  +   + + + +      
+  + + + + + +     +
+    +             +
+  + +   +          
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+        +     + +  
++     + + + + + +  
+  + + + + + + + +   
+[H[Jsweep: 1
+
+  + + + + + +      
+  + + + + + +      
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +   
+[H[Jrecalled: 
+  + + + + + +      
+  + + + + + +      
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +   
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/006/5.dat	 hammingDistance: 0.000000
+
+index: 1	 pattern: ./character_groups/006/I.dat	 hammingDistance: 1.920000
+
+index: 2	 pattern: ./character_groups/006/L.dat	 hammingDistance: 1.760000
+
+index: 3	 pattern: ./character_groups/006/Q.dat	 hammingDistance: 1.560000
+
+nearest match: 0	hammingDistance: 0.000000
+
+  + + + + + +      
+  + + + + + +      
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +   
+
+[H[JLoaded Network patterns, memory : 0
+
+    + + + + + + +  
+    + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +  
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +   
+[H[JLoaded Network patterns, memory : 1
+
++ + + + + + + + +  
++ + + + + + + + +  
++ +             + +
++ +             + +
++ + + + + + + + + +
++ + + + + + + + + +
++ +             + +
++ +             + +
++ + + + + + + + +  
++ + + + + + + + +   
+[H[JLoaded Network patterns, memory : 2
+
+    + + + + + + + +
+    + + + + + + + +
++ +                
++ +                
++ +                
++ +                
++ +                
++ +                
+    + + + + + + + +
+    + + + + + + + + 
+[H[JLoaded Network patterns, memory : 3
+
++ + +           + +
++ + +           + +
++ + + +         + +
++ +   + +       + +
++ +   + +       + +
++ +     + +     + +
++ +     + +     + +
++ +       + +   + +
++ +       + + + + +
++ +           + + + 
+[H[J[H[Jpristine test pattern : 
+
+  + + +   + + + + +
+    +       + +   +
+        +       +  
+              +    
+  + + +     + + +  
+  + +   + + + + +  
+  + +              
+  + +     +        
+  + + + + + + + +  
+  + +   +   + + +   
+[H[Jrandomized test pattern : 
+
+  + + +   + + + + +
+    +       + +   +
+        +       +  
+              +    
+  + + +     + + +  
+  + +   + + + + +  
+  + +              
+  + +     +        
+  + + + + + + + +  
+  + +   +   + + +   
+[H[Jmaking 2Dlinks ...
+making 2Dspins ...
+done ...
+[H[Jsweep: 0
+
+  + + +   + + + + +
+    +       + +   +
+        +       +  
+              +    
+  + + +     + + +  
+  + +   + + + + +  
+  + +              
+  + +     +        
+  + + + + + + + +  
+  + +   +   + + +   
+[H[Jsweep: 1
+
+    + + + + + + +  
+    + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +  
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +   
+[H[Jrecalled: 
+    + + + + + + +  
+    + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +  
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +   
+
+Checking Hamming distances ...
+index: 0	 pattern: ./character_groups/007/2.dat	 hammingDistance: 0.000000
+
+index: 1	 pattern: ./character_groups/007/B.dat	 hammingDistance: 1.040000
+
+index: 2	 pattern: ./character_groups/007/C.dat	 hammingDistance: 1.360000
+
+index: 3	 pattern: ./character_groups/007/N.dat	 hammingDistance: 2.560000
+
+nearest match: 0	hammingDistance: 0.000000
+
+    + + + + + + +  
+    + + + + + + +  
+              + +  
+              + +  
+  + + + + + + + +  
+  + + + + + + + +  
+  + +              
+  + +              
+  + + + + + + + +  
+  + + + + + + + +   
+
