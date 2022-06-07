@@ -1,0 +1,22 @@
+PROBLEM 1
+
+For this problem, I chose to animate two standing waves separately; the wave 
+numbers (rather the multiples of 2 PI) for these standing waves were 1.5 and 4.
+
+PROBLEM 2
+
+For this problem, I used the same parameters as the book (those being l=1, 
+x_0=0.5, Delta x=0.01, and c=300), and I also tracked the amplitude at x=0.05. 
+Since the book wanted me to compare the FFT of the pulse when displaced at 
+x_0=0.5 and x_0=0.45, I generated the data for both of these via 
+assignment4_2.c and assignment4_2_offset.c; furthermore, the data for both was 
+also compiled into a gif. I then found the FFT of both sets of data at the 
+tracked displacement of x=0.05 via assignment4_2_fft.c and 
+assignment4_2_fft_offset.c, which also outputted the real and imaginary 
+components of the Fourier frequency components (done via fftw_plan_dft_r2c_1d). 
+With all this, I was able to plot out the FFT of displaced pulse at x_0=0.5
+as well as the power spectra of both displaced pulses. One thing to note about
+the power spectra plots is that they do not completely align with the plots 
+given in the book; that is, the size of the peaks are not the same. However,
+the overall behavior (placement of peaks for both plots) mirror what is shown
+in the book.
