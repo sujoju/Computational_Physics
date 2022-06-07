@@ -1,0 +1,64 @@
+Problem 1: 
+
+I initially did this problem by declaring fact to be an int. 
+However, I saw very quickly that this resulted in the factorial to be incorrect.
+In particular, for any integer greater than 12, my program would output the 
+wrong value for the factorial.
+
+Since I saw nothing wrong with how the factorial was being calculated, I began 
+to wonder if the data type I was using for containing the factorial was the 
+issue (this being int).
+After looking in Wikipedia (more specifically, https://en.wikipedia.org/wiki/
+C_data_types), I realized that this was indeed the case, and changed the 
+data type for fact to be an unsigned long long int.
+
+Problem 2: 
+
+This problem was fairly straightforward. 
+The only question that I had while using this program was in how the the program
+was supposed to act when the input was longer than ARRAY_SIZE.
+In my case, I saw the following (with ARRAY_SIZE = 5):
+
+Please input some characters ... 
+
+abcde
+You input: abcde
+You input: 
+
+abcdef
+You input: abcde
+You input: f
+
+fini!
+
+One can see that the program does indeed cut things off at the array size (as
+expected from using the fgets function), but we are left with an additional 
+output that outputs the remaining characters.
+The explanation that I can think of for this is that the program treats the EOF
+as a character (which means that the input abcde is actually 6 characters long),
+which is why the condition in the while loop is not null after outputting just 
+abcde.
+Thus, the program grabs the next 5 characters (if there are that much) and then 
+outputs them (in the case of EOF, this would be a blank output).
+
+Problem 3: 
+
+In this program, we see that "a" changes to "jjllo," while "b" remains 
+unchanged.
+To see why this is happening, I printed out all the addresses of elements for 
+both "a" and "b."
+From this, I was able to see that &a[0] == &b[16] and &a[1]==&b[17].
+Thus, changing both &b[16] and &b[17] results in changing &a[0] and &a[1], 
+respectively, since the addresses are the same. 
+
+Problem 4: 
+
+For this program, I started out by simplifying the problem down to one triangle.
+I noticed that I can output this one triangle by starting at the midpoint and 
+adding one * to the left and right of the midpoint for each row that I go down.
+
+From this, I was able to extend the program to three triangles by noticing that 
+the midpoints of the lower two triangles can be used to find the midpoint of the
+upper triangle (the lower two midpoints were the two integer variables that I 
+used).
+I then just used for loops to draw the three triangles out.
