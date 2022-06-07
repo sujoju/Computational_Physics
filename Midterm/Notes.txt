@@ -1,0 +1,99 @@
+ORDER OF SCRIPTS: 
+
+run_midterm_1.sh
+run_midterm_1_opt.sh (after compiling with -O2 tag)
+run_midterm_2_beat.sh (with inputs 250 4.0 4.4)
+run_midterm_2_fft.sh
+run_midterm_2_gnuplots.sh
+
+For run_midterm_2_beat.sh, I would have run a longer version, but 
+anything past 300 kept crashing on me. Thus, I have opted for 250.
+However, I have included a longer version of the gif as a video,
+which was easier for my computer to handle when animating. To make
+the video, I used ffmpeg.
+
+Problem 1: Part a
+
+Referencing midterm_1.png (in particular, the left-most picture), we see that
+the relative error with respect to the total number of simulation steps follows
+a linear relationship in a log-log plot for all three ODE methods (barring the
+right-most point in the rkO4 method). In fact, we see that the linear 
+relationship is negative, which tells us that the relative error is proportional
+to (total number of simulation steps)^(-k), where k is some positive constant;
+i.e., the more simulation steps we take, the lower the relative error will be
+-- as expected. However, we see that there is a difference between the value
+of k for each of the three methods; in particular, we see that the value of 
+k increases in the order of euler to rkO2 to rkO4. This essentially tells us
+that, compared to the euler method, the rk methods give us a more rapid
+decrease in relative error with the same amount of steps used with the euler
+method -- in fact, the rkO4 method gives us the most rapid rate of decrease
+with the same amount of simulation steps. It should be noted that the 
+right-most point of the rkO4 method does not follow the linear trend. I think 
+that this is just a limitation to how fine we can calculate the error; i.e.,
+it could be the case that our hardware is limiting us from calculating even
+smaller numbers.
+
+Problem 1: Part b
+
+Referencing midterm_1.png (in particular, the right-most picture), we see that
+the number of instructions with respect to the total number of simulation steps 
+follows what looks like an exponential relationship in a log-log plot for all 
+three ODE methods. I.e., we see that the number of instructions grows 
+faster than an exponential as we increase the total number of simulation steps.
+I am actually quite curious what such a relationship would actually be, or what
+we know it to be.
+
+Problem 1: Part b
+
+Referencing midterm_1_opt.png, we see that plot for precision vs. granularity 
+stays the same (as expected, since we did not change how the calculations were
+done), but find that the number of instructions decreases. However, we see that
+this decrease becomes more and more noticeable the more number of simulation 
+steps we give the program. We can still see that the number of instructions 
+grows faster than an exponential (via the right-most picture) as we increase
+the total number of simulation steps. Thus, although the optimization improved
+the performance of our program, it still does not change the behavior in which
+the number of instructions grows with the number of simulation steps.
+
+Problem 2: Animation
+
+If we extend the xrange for our plot to 16 rather than 4, then we see two 
+waves -- we have a wave that propagates to the right at the left endpoint, and
+we have a wave that propagates to the left at the right endpoint. This makes
+sense with respect to how we set up our boundary conditions and propagate 
+function; to explain, the propagate function works on the defined length of the
+string that we set (in our case, 16). Whatever boundary conditions we put at 
+the ends of this string will be accounted for in the propagate function, which 
+will determine the behavior we see on the string. In our case, we have put 
+driving conditions on both ends of the string, which emulates the string being
+shaken from both ends of the string. Thus, it makes sense that we see a wave
+coming from both ends, since we have emulated such a situation. If we just 
+wanted to have the string being shaken at the leftmost endpoint, then I think
+that we would need to alter the boundary condition at the right endpoint such
+that it is 0 before the incoming wave from the left reaches the right 
+endpoint. When the incoming wave does reach the right endpoint, then the 
+boundary condition at this endpoint should match the incoming wave.
+One way to do this would be to just copy the boundary condition at the left
+endpoint onto the right endpoint, but with a "time delay." This time delay
+would be equal to how long it takes for the incoming wave from the left
+to reach the right endpoint. This way, I think that the driving condition on
+the right matches the incoming wave, which results in the propagate function
+to do essentially nothing at the rightmost endpoint -- hence, giving us the
+notion that the right endpoint is free. I think that this is doable, but 
+haven't been able to implement it yet.
+
+Problem 2: Part b
+
+Referencing midterm_2_fft_k1k2.png, we can see that the peaks we get from the 
+FFT align fairly well with what we expect (which are depicted as the straight, 
+vertical lines). In particular, we have the peaks for the 1320 Hz wave to be 
+quite close to to the actual frequency, whereas the peaks for the 1200 Hz wave
+are slightly further away from the actual frequency.
+
+Problem 2: Parts b and c
+
+Referencing midterm_2_fft_k3.png and midterm_2_fft_sum.png, we see that the
+FFTs for both are identical to each other. This makes sense since we see that
+the wave produced from both methods were the same. As for the peaks that we see,
+they are in line with what we gathered in part a; that is, we see the same 
+behavior and location of the peaks that we saw in part a.

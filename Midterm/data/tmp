@@ -1,0 +1,18 @@
+
+ Performance counter stats for './bin/midterm_1.exe 50000 0.0001 2 quiet':
+
+              8.72 msec task-clock:u              #    0.916 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+               490      page-faults:u             #    0.056 M/sec                  
+         8,008,362      cycles:u                  #    0.918 GHz                    
+         8,975,963      instructions:u            #    1.12  insn per cycle         
+           930,970      branches:u                #  106.775 M/sec                  
+             2,950      branch-misses:u           #    0.32% of all branches        
+
+       0.009515791 seconds time elapsed
+
+       0.007407000 seconds user
+       0.002116000 seconds sys
+
+

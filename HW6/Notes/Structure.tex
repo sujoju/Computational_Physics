@@ -1,0 +1,425 @@
+%-------------------------------------------------------------------------------
+%	PACKAGES
+%-------------------------------------------------------------------------------
+
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage{kpfonts}
+\usepackage[skins, breakable, many]{tcolorbox}
+\usepackage{paracol}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{caption}
+\usepackage{import}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\allowdisplaybreaks
+
+%-------------------------------------------------------------------------------
+%	COLORS
+%-------------------------------------------------------------------------------
+
+\definecolor{xred}{HTML}{BD4242}
+\definecolor{xblue}{HTML}{4268BD}
+\definecolor{xgreen}{HTML}{52B256}
+\definecolor{xpurple}{HTML}{7F52B2}
+\definecolor{xorange}{HTML}{FD9337}
+\definecolor{xdotted}{HTML}{999999}
+\definecolor{xgray}{HTML}{777777}
+\definecolor{xcyan}{HTML}{80F5DC}
+\definecolor{xpink}{HTML}{f690ea}
+\definecolor{xgraycyan}{HTML}{82bceb}
+
+%-------------------------------------------------------------------------------
+%	SECTION OPTIONS
+%-------------------------------------------------------------------------------
+
+%This sets the counter for how "deep" the numbering for the section, subsection, and subsubsection will go. 
+%(Max is 5 - which goes to subparagraph)
+\setcounter{secnumdepth}{3}
+%This goes into when the numbering for the sections will start. 
+%I.e. starting at 0 is equivalent numbering at 1 since it starts counting once it is called\
+\setcounter{chapter}{0}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+
+%These lines just set the section font size along with it being boldfaced.
+\titleformat*{\section}
+{\fontsize{18}{1em}\selectfont\bfseries}
+\titleformat*{\subsection}
+{\fontsize{16}{1em}\selectfont\bfseries}
+\titleformat*{\subsubsection}
+{\fontsize{14}{1em}\selectfont\bfseries}
+
+%-------------------------------------------------------------------------------
+%	COLUMN SECTIONS (Only used with 1.5cm margins)
+%-------------------------------------------------------------------------------
+
+%This breaks up the page into columns of 6cm and then 12 cm
+%\setcolumnwidth{6cm, 12cm}  
+\setlength{\columnsep}{5mm}
+%This is the column separation distance
+%\setlength{\columnseprule}{0.4pt} 
+%This gives us the following vertical line.
+
+%-------------------------------------------------------------------------------
+%	ENVIRONMENTS AND TCOLORBOXES
+%-------------------------------------------------------------------------------
+
+%{Frame Color}{Width of Frame, range: [0, 1]}{Title}{Description}[label]
+\DeclareTColorBox{titleBoxDefault}{ m m m m o }
+{%
+    breakable,
+    pad at break* = 2mm,
+    colframe = {#1},
+    coltitle = white,
+    colback = white,
+    colbacktitle = {#1},
+    width = #2 \linewidth,
+    title = {#3: #4},
+    enhanced,
+    attach boxed title to top left={
+            yshift=-0.2cm,
+            xshift=0.4cm,
+        },
+    boxed title style={
+            boxrule=0pt,
+            colframe=white,
+            arc=5pt,
+            outer arc=4pt,
+        },
+    separator sign={~~},
+    IfNoValueTF={#5}{}{ phantom = \phantomsection\hypertarget{#5} }
+}
+
+%{Frame Color}{Width of Frame, range: [0, 1]}[label]
+\DeclareTColorBox{blockBoxDefault}{ m m o }
+{%
+    breakable,
+    pad at break* = 2mm,
+    colback = white,
+    colframe = #1,
+    width = #2 \linewidth,
+    IfNoValueTF={#3}{}{ phantom = \phantomsection\hypertarget{#3} }
+}
+
+%Note that this is exactly the same as titleBoxDefault, but with better initial spacing. 
+%s(*) - controls initial spacing 
+%D<>{xgray} - controls frame color / Default option is xgray
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%m - controls the Title
+%m - controls the Description
+%o - controls the label
+\NewDocumentEnvironment{titleBox}{ s D<>{xgray} D(){1} m m o }
+{%
+\IfBooleanTF{#1}{}{\baseSkip[0.5]}
+
+\IfNoValueTF{#6}
+{%
+    \begin{titleBoxDefault}{#2}{#3}{#4}{#5}
+}
+{%
+    \begin{titleBoxDefault}{#2}{#3}{#4}{#5}[#6]
+        }
+        }
+        {%
+    \end{titleBoxDefault}%
+}
+
+%Note that this is exactly the same as blockBoxDefault, but with better initial spacing. 
+%s(*) - controls initial spacing 
+%D<>{xgray} - controls frame color / Default option is xgray
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%o - controls the label
+\NewDocumentEnvironment{blockBox}{ s D<>{xgray} D(){1} o }
+{%
+\IfBooleanTF{#1}{}{\baseSkip[0.5]}
+
+\IfNoValueTF{#3}
+{%
+    \begin{blockBoxDefault}{#2}{#3}
+}
+{%
+    \begin{blockBoxDefault}{#2}{#3}[#4]
+        }
+        }
+        {%
+    \end{blockBoxDefault}%
+}
+
+%s(*) - controls initial spacing 
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%m - controls the Description
+%o - controls the label
+\NewDocumentEnvironment{qBox}{ s D(){1} m o }
+{%
+\IfBooleanTF{#1}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}*(#2){Problem}{#3}
+}
+{%
+    \begin{titleBox}*(#2){Problem}{#3}[#4]
+}
+}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}{Problem}{#3}
+}
+{%
+    \begin{titleBox}{Problem}{#3}[#4]
+        }
+        }
+        }
+        {%
+    \end{titleBox}%
+}
+
+%s(*) - controls initial spacing 
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%m - controls the Description
+%o - controls the label
+\NewDocumentEnvironment{defBox}{ s D(){1} m o }
+{%
+\IfBooleanTF{#1}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}*<xred>(#2){Definition}{#3}
+}
+{%
+    \begin{titleBox}*<xred>(#2){Definition}{#3}[#4]
+}
+}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}<xred>(#2){Definition}{#3}
+}
+{%
+    \begin{titleBox}<xred>(#2){Definition}{#3}[#4]
+        }
+        }
+        }
+        {%
+    \end{titleBox}%
+}
+
+%s(*) - controls initial spacing 
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%O{Theorem} - controls Title / Default is Theorem
+%m - controls the Description
+%o - controls the label
+\NewDocumentEnvironment{thmBox}{ s D(){1} O{Theorem} m o }
+{%
+\IfBooleanTF{#1}
+{
+\IfNoValueTF{#5}
+{%
+    \begin{titleBox}*<xblue>(#2){#3}{#4}
+}
+{%
+    \begin{titleBox}*<xblue>(#2){#3}{#4}[#5]
+}
+}
+{
+\IfNoValueTF{#5}
+{%
+    \begin{titleBox}<xblue>(#2){#3}{#4}
+}
+{%
+    \begin{titleBox}<xblue>(#2){#3}{#4}[#5]
+        }
+        }
+        }
+        {%
+    \end{titleBox}%
+}
+
+%s(*) - controls initial spacing 
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%m - controls the Description
+%o - controls the label
+\NewDocumentEnvironment{egBox}{ s D(){1} m o }
+{%
+\IfBooleanTF{#1}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}*<xgreen>(#2){Example}{#3}
+}
+{%
+    \begin{titleBox}*<xgreen>(#2){Example}{#3}[#4]
+}
+}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}<xgreen>(#2){Example}{#3}
+}
+{%
+    \begin{titleBox}<xgreen>(#2){Example}{#3}[#4]
+        }
+        }
+        }
+        {%
+    \end{titleBox}%
+}
+
+%s(*) - controls initial spacing 
+%D(){1} - controls frame width, range: [0, 1] / Default option is 1
+%O{Theorem} - controls Title / Default is Theorem
+%m - controls the Description
+%o - controls the label
+\NewDocumentEnvironment{remarkBox}{ s D(){1} m o }
+{%
+\IfBooleanTF{#1}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}*(#2){Remark}{#3}
+}
+{%
+    \begin{titleBox}*(#2){Remark}{#3}[#4]
+}
+}
+{
+\IfNoValueTF{#4}
+{%
+    \begin{titleBox}(#2){Remark}{#3}
+}
+{%
+    \begin{titleBox}(#2){Remark}{#3}[#4]
+        }
+        }
+        }
+        {%
+    \end{titleBox}%
+}
+
+%s(*) - controls initial spacing 
+\NewDocumentEnvironment{proofBox}{ s }
+{%
+    \IfBooleanTF{#1}
+    {
+        \wrapBox{Proof}
+        \baseSkip
+
+    }
+    {
+        \wrapBox{Proof}
+    }
+}
+{%
+}
+
+%This is used for sectioning off paragraph writing. Its only function is for tidying up the code.
+\NewDocumentEnvironment{newParagraph}{}
+{%
+}
+{%
+}
+
+%s(*) - controls initial spacing 
+%m - controls the Description
+\NewDocumentEnvironment{qPart}{ s m }
+{%
+    \textbf{\wrapBox{#2}}
+}
+{%
+    \IfBooleanTF{#1}
+    {%
+    }
+    {%
+
+        \baseRule
+        \baseSkip[0.2]
+    }
+}
+
+%This environment simplifies the code for each section
+%s(*) - controls spacing at the end
+%D<>{6cm} - controls width of first column / Default is 6cm
+%D(){12cm} - controls width of second column / Default is 12cm
+%O{0} - controls which column we start at / Default is 0 (i.e first column)
+\NewDocumentEnvironment{newColumn}{ s D<>{6cm} D(){12cm} O{0} }
+{%
+    \setcolumnwidth{#2, #3}
+    %The 2 indicates how many columns that we have - the dimensions will be set via parameters
+    \begin{paracol}{2}
+        %This controls which column we start with first. Note that \switchcolumn* keeps the alignment when switching+
+        \switchcolumn[#4]
+        }
+        {%
+    \end{paracol}
+    %This provides some space between the sections/topics via a horizontal line and vertical spacing.
+    \IfBooleanTF{#1}{}{\baseRule}
+}
+
+%NOTE: \tcblower allows for you to draw a dotted horizontal line within each of the boxes. 
+%Note that this command can only be used once.
+
+%-------------------------------------------------------------------------------------------------------------------------------
+%	COMMANDS
+%-------------------------------------------------------------------------------------------------------------------------------
+
+%This command allows for the user to input in a figure via inkscape. 
+%Note that the inkscape file must be saved as .pdf and .pdf_tex. 
+\NewDocumentCommand{\incfig}{ m O{1} }
+{%
+    \def\svgwidth{#2\linewidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+%This command creates a new centered, horizontal line with a length that I can choose. 
+%Right now, it is set to be \linewidth
+\NewDocumentCommand{\baseRule}{ O{1} }
+{%
+    \makebox[0pt][l]{\rule[0\baselineskip]{#1\linewidth}{.3mm}}%
+
+    \baseSkip[0.5]%
+}
+
+%This provides the vertical spacing if needed%
+\NewDocumentCommand{\baseSkip}{ s O{1} }
+{%
+    \IfBooleanTF{#1}
+    {%
+        \vspace*{#2\baselineskip}%
+    }
+    {%
+        \vspace{#2\baselineskip}%
+    }
+}
+
+\NewDocumentCommand{\baseIndent}{ s O{1} }
+{%
+    \IfBooleanTF{#1}
+    {%
+        \hspace*{#2 em}%
+    }
+    {%
+        \hspace{#2 em}%
+    }
+}
+
+\NewDocumentCommand{\wrapBox}{D<>{xgray} m}
+{%
+    \tcbox[size = small, colback = white,
+        colframe = #1,
+        on line]{#2}%
+}

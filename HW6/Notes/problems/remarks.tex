@@ -1,0 +1,45 @@
+\begin{remarkBox}{On How I Implemented magnetism.c}
+I have implemented the energyFunction function to return the corresponding
+energy value for a certain spin; this means that I kept the spin as-is (that is,
+I did not flip the spin as shown in lecture), and I did not return twice the energy 
+value. 
+As for how the energy of a particular spin is calculated, it is using the following:
+\begin{equation*}
+    E_{ i }
+    =
+    - J ( s_{ i } s_{ \text{left} } + s_{ i } s_{ \text{right} }
+    + s_{ i } s_{ \text{above} } + s_{ i } s_{ \text{below} } )
+    - \mu H s_{ i }
+\end{equation*}
+It is in the boltzmannFlip function that I introduced the factor of \( - 2.0 \) attached
+to the energyFunction; this factor of \( - 2.0 \) is what will give 
+\( \Delta E_{ \text{flip} } \). 
+With this, the implementation of the boltzmannFlip is exactly the same as provided in 
+lecture as well as the text.
+
+\baseSkip
+
+As for the getEnergyPerSpin and getEnergySquaredPerSpin functions, I instead opted 
+to make these into getEnergy and getEnergySquared functions, which will return the 
+total energy and total energy squared for the system, respectively.
+My reasoning for doing so was that it made it easier to implement problems 2 and 3 of 
+this assignment as it made it easier to keep track of the factors of \( 2 \) as well 
+as the scaling factors (i.e., dividing/multiplying by the lattice size).
+This meant that I had to slightly change the main files provided in lecture to 
+accommodate for these changes. 
+
+\baseSkip
+
+Lastly, the getMagnetization was implemented using the fact that 
+\begin{equation*}
+    M_{ \alpha }
+    =
+    \sum_{ i } s_{ i }
+\end{equation*}
+which is the magnetic moment for a given microstate.
+To find the magnetization, 
+we need to take the sum over the magnetic moment for a microstate multiplied by the 
+probability of such a microstate to occur; this is where the many sweeps for our 
+Monte Carlo simulation comes into play. 
+The getCorrelationInfo function was implemented using what was given in lecture.
+\end{remarkBox}
